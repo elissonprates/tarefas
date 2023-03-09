@@ -1,19 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ConfirmationService, MessageService } from 'primeng/api';
+import { Tarefa } from 'src/app/model/tarefa';
 
 
-export interface Product {
-  id?: string;
-  code?: string;
-  name?: string;
-  description?: string;
-  price?: number;
-  quantity?: number;
-  inventoryStatus?: string;
-  category?: string;
-  image?: string;
-  rating?: number;
-}
+
 
 @Component({
   selector: 'app-tarefa',
@@ -24,11 +14,11 @@ export class TarefaComponent implements OnInit {
 
   productDialog: boolean;
 
-  products: Product[];
+  products: Tarefa[];
 
-  product: Product;
+  product: Tarefa;
 
-  selectedProducts: Product[];
+  selectedProducts: Tarefa[];
 
   submitted: boolean;
 
