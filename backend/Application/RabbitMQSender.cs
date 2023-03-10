@@ -1,4 +1,5 @@
 ﻿using Contracts;
+using Domain.Entities;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using RabbitMQ.Client;
@@ -27,11 +28,11 @@ public class RabbitMQSender : IRabbitMQSender
         _userName = _config.GetValue<string>("RabbitMQ:Local:UserName") ?? string.Empty;
     }
 
-    public void SendMessage(TarefaDTO tarefa)
+    public void SendMessage(TarefaEntity tarefa)
     {
-        var queueName = $"CaixaLocal";
+        var queueName = $"TarefasExcluidas";
 
-        var message = new MessageInQueue<TarefaDTO>("", tarefa);
+        var message = new MessageInQueue<TarefaEntity>("Tarefa Excluida", tarefa);
 
         if (ConnectionExists())
         {

@@ -9,12 +9,14 @@ public class TarefaService : ITarefaService
 {
     private readonly IMapper _mapper;
     private readonly ILogger _logger;
+    private readonly IRabbitMQSender _sender;
     private readonly ITarefaRepository _repository;
-    public TarefaService(ITarefaRepository repository, IMapper mapper, ILogger<TarefaService> logger)
+    public TarefaService(IMapper mapper, ITarefaRepository repository, IRabbitMQSender sender, ILogger<TarefaService> logger)
     {
         _mapper = mapper;
         _logger = logger;
         _repository = repository;
+        _sender = sender;
     }
 
     public async Task<RetornoApi<TarefaDTO>> ObterTarefaPorCodigo(int? codigo)
@@ -85,6 +87,8 @@ public class TarefaService : ITarefaService
             return new RetornoApi("Tarefa não existe", false);
 
         await _repository.Excluir(codigo);
+
+        _sender.SendMessage(existeTarefa);
 
         return new RetornoApi();
     }

@@ -1,6 +1,8 @@
-﻿namespace Contracts;
+﻿using Domain.Entities;
+
+namespace Contracts;
 
 public interface IRabbitMQSender
 {
-    void SendMessage(TarefaDTO tarefa);
+    void SendMessage(TarefaEntity tarefa);
 }

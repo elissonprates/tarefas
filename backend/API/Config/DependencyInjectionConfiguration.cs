@@ -10,5 +10,6 @@ public static class DependencyInjectionConfiguration
     {
         builder.Services.AddScoped<ITarefaService, TarefaService>();
         builder.Services.AddScoped<ITarefaRepository, TarefaRepository>();
+        builder.Services.AddScoped<IRabbitMQSender, RabbitMQSender>();
     }
 }
