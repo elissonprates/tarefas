@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projetos\\tarefas\\backend\\infra\\Infra.csproj": {}
+    "D:\\Projetos\\tarefas\\backend\\Infra\\Infra.csproj": {}
   },
   "projects": {
     "D:\\Projetos\\tarefas\\backend\\Contrats\\Contracts.csproj": {
@@ -63,14 +63,14 @@
         }
       }
     },
-    "D:\\Projetos\\tarefas\\backend\\domain\\Domain.csproj": {
+    "D:\\Projetos\\tarefas\\backend\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projetos\\tarefas\\backend\\domain\\Domain.csproj",
+        "projectUniqueName": "D:\\Projetos\\tarefas\\backend\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "D:\\Projetos\\tarefas\\backend\\domain\\Domain.csproj",
+        "projectPath": "D:\\Projetos\\tarefas\\backend\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\eliss\\.nuget\\packages\\",
-        "outputPath": "D:\\Projetos\\tarefas\\backend\\domain\\obj\\",
+        "outputPath": "D:\\Projetos\\tarefas\\backend\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\eliss\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -128,14 +128,14 @@
         }
       }
     },
-    "D:\\Projetos\\tarefas\\backend\\infra\\Infra.csproj": {
+    "D:\\Projetos\\tarefas\\backend\\Infra\\Infra.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projetos\\tarefas\\backend\\infra\\Infra.csproj",
+        "projectUniqueName": "D:\\Projetos\\tarefas\\backend\\Infra\\Infra.csproj",
         "projectName": "Infra",
-        "projectPath": "D:\\Projetos\\tarefas\\backend\\infra\\Infra.csproj",
+        "projectPath": "D:\\Projetos\\tarefas\\backend\\Infra\\Infra.csproj",
         "packagesPath": "C:\\Users\\eliss\\.nuget\\packages\\",
-        "outputPath": "D:\\Projetos\\tarefas\\backend\\infra\\obj\\",
+        "outputPath": "D:\\Projetos\\tarefas\\backend\\Infra\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\eliss\\AppData\\Roaming\\NuGet\\NuGet.Config",

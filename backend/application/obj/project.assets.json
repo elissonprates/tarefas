@@ -412,8 +412,8 @@
     },
     "Domain/1.0.0": {
       "type": "project",
-      "path": "../domain/Domain.csproj",
-      "msbuildProject": "../domain/Domain.csproj"
+      "path": "../Domain/Domain.csproj",
+      "msbuildProject": "../Domain/Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -430,11 +430,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projetos\\tarefas\\backend\\application\\Application.csproj",
+      "projectUniqueName": "D:\\Projetos\\tarefas\\backend\\Application\\Application.csproj",
       "projectName": "Application",
-      "projectPath": "D:\\Projetos\\tarefas\\backend\\application\\Application.csproj",
+      "projectPath": "D:\\Projetos\\tarefas\\backend\\Application\\Application.csproj",
       "packagesPath": "C:\\Users\\eliss\\.nuget\\packages\\",
-      "outputPath": "D:\\Projetos\\tarefas\\backend\\application\\obj\\",
+      "outputPath": "D:\\Projetos\\tarefas\\backend\\Application\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\eliss\\AppData\\Roaming\\NuGet\\NuGet.Config",

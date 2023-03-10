@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "WQ2iRIvnDoAVrH8SY618VhaIOvrpHhRvDbaaSfDfmf3TqklW+jglTYPWDurSKwDKiA22D8VsPXsp7JxnbXEEmw==",
+  "dgSpecHash": "5okjqWlx0WF8IlZY3Bun2FAnKUu3MXqPewj1wn3Flj/AlRmKxuH5A6qUHigw5XIHTu6rXF0XjDSGp6rwgV2JuA==",
   "success": true,
-  "projectFilePath": "D:\\Projetos\\tarefas\\backend\\application\\Application.csproj",
+  "projectFilePath": "D:\\Projetos\\tarefas\\backend\\Application\\Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\eliss\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\eliss\\.nuget\\packages\\fluentvalidation\\11.5.1\\fluentvalidation.11.5.1.nupkg.sha512",

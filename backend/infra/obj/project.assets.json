@@ -3780,8 +3780,8 @@
     },
     "Domain/1.0.0": {
       "type": "project",
-      "path": "../domain/Domain.csproj",
-      "msbuildProject": "../domain/Domain.csproj"
+      "path": "../Domain/Domain.csproj",
+      "msbuildProject": "../Domain/Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -3800,11 +3800,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projetos\\tarefas\\backend\\infra\\Infra.csproj",
+      "projectUniqueName": "D:\\Projetos\\tarefas\\backend\\Infra\\Infra.csproj",
       "projectName": "Infra",
-      "projectPath": "D:\\Projetos\\tarefas\\backend\\infra\\Infra.csproj",
+      "projectPath": "D:\\Projetos\\tarefas\\backend\\Infra\\Infra.csproj",
       "packagesPath": "C:\\Users\\eliss\\.nuget\\packages\\",
-      "outputPath": "D:\\Projetos\\tarefas\\backend\\infra\\obj\\",
+      "outputPath": "D:\\Projetos\\tarefas\\backend\\Infra\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\eliss\\AppData\\Roaming\\NuGet\\NuGet.Config",

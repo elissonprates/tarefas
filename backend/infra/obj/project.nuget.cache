@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "mkCdvO585o4HNOp790vMBd51RmNc1SPXSszaDFuxHJOsQUUpHzWhznEnMFsl/KtUZBGsYkhW2kV8B0Wx1Ka2EQ==",
+  "dgSpecHash": "8kvQ/bPt+zZTDzxbhLwxHSAm4HBz5QEGVzyF7z8cV7Tb7YfAZ2EG+/0TxNW+BloI9a8cueHvkpKc/HOL3nFr/A==",
   "success": true,
-  "projectFilePath": "D:\\Projetos\\tarefas\\backend\\infra\\Infra.csproj",
+  "projectFilePath": "D:\\Projetos\\tarefas\\backend\\Infra\\Infra.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\eliss\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\eliss\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
