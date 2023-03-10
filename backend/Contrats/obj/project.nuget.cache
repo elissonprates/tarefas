@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "tqS619vTVcNclxKFYJ1majFwASJgwc48vyTbwFxtBfXMsN9WY3K88i6w0qYgbzuiW29Wcrz9B3NH9/3R0aoFVw==",
+  "dgSpecHash": "AJLspJPJtowQJGsNhkDeeAzcupe7Pxil8fT1TSO/cbpYa8mCYJa+lshtUSlGByCbhqhHKKHeK6JWfQj07THPcA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\eliss\\source\\repos\\tarefas\\backend\\Contrats\\Contracts.csproj",
+  "projectFilePath": "D:\\Projetos\\tarefas\\backend\\Contrats\\Contracts.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\eliss\\.nuget\\packages\\fluentvalidation\\11.5.1\\fluentvalidation.11.5.1.nupkg.sha512",
     "C:\\Users\\eliss\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.2.2\\fluentvalidation.aspnetcore.11.2.2.nupkg.sha512",

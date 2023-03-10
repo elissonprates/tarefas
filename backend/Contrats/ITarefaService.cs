@@ -1,8 +1,12 @@
-﻿namespace Contracts;
+﻿using Domain.Entities;
+
+namespace Contracts;
 
 public interface ITarefaService
 {
-    Task<RetornoApi<ICollection<TarefaDTO>>> ObterTarefas();
-    Task<RetornoApi<TarefaDTO>> ObterTarefaPorCodigo(int codigo);
-    Task<RetornoApi> Salvar(TarefaDTO dto);
+    Task<RetornoApi<TarefaDTO>> ObterTarefas();
+    Task<RetornoApi<TarefaDTO>> ObterTarefaPorCodigo(int? codigo);
+    Task<RetornoApi> Incluir(TarefaDTO dto);
+    Task<RetornoApi> Alterar(TarefaDTO dto);
+    Task<RetornoApi> Excluir(int? codigo);
 }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\eliss\\source\\repos\\tarefas\\backend\\backend\\api.csproj": {}
+    "D:\\Projetos\\tarefas\\backend\\backend\\api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\eliss\\source\\repos\\tarefas\\backend\\backend\\api.csproj": {
+    "D:\\Projetos\\tarefas\\backend\\application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\eliss\\source\\repos\\tarefas\\backend\\backend\\api.csproj",
-        "projectName": "api",
-        "projectPath": "C:\\Users\\eliss\\source\\repos\\tarefas\\backend\\backend\\api.csproj",
+        "projectUniqueName": "D:\\Projetos\\tarefas\\backend\\application\\Application.csproj",
+        "projectName": "Application",
+        "projectPath": "D:\\Projetos\\tarefas\\backend\\application\\Application.csproj",
         "packagesPath": "C:\\Users\\eliss\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\eliss\\source\\repos\\tarefas\\backend\\backend\\obj\\",
+        "outputPath": "D:\\Projetos\\tarefas\\backend\\application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\eliss\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\eliss\\source\\repos\\tarefas\\backend\\Contrats\\Contracts.csproj": {
-                "projectPath": "C:\\Users\\eliss\\source\\repos\\tarefas\\backend\\Contrats\\Contracts.csproj"
+              "D:\\Projetos\\tarefas\\backend\\Contrats\\Contracts.csproj": {
+                "projectPath": "D:\\Projetos\\tarefas\\backend\\Contrats\\Contracts.csproj"
               }
             }
           }
@@ -44,6 +44,103 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
+            "Microsoft.Extensions.Logging.Abstractions": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Serilog": {
+              "target": "Package",
+              "version": "[2.12.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.103\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Projetos\\tarefas\\backend\\backend\\api.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Projetos\\tarefas\\backend\\backend\\api.csproj",
+        "projectName": "api",
+        "projectPath": "D:\\Projetos\\tarefas\\backend\\backend\\api.csproj",
+        "packagesPath": "C:\\Users\\eliss\\.nuget\\packages\\",
+        "outputPath": "D:\\Projetos\\tarefas\\backend\\backend\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\eliss\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\Projetos\\tarefas\\backend\\application\\Application.csproj": {
+                "projectPath": "D:\\Projetos\\tarefas\\backend\\application\\Application.csproj"
+              },
+              "D:\\Projetos\\tarefas\\backend\\Contrats\\Contracts.csproj": {
+                "projectPath": "D:\\Projetos\\tarefas\\backend\\Contrats\\Contracts.csproj"
+              },
+              "D:\\Projetos\\tarefas\\backend\\infra\\Infra.csproj": {
+                "projectPath": "D:\\Projetos\\tarefas\\backend\\infra\\Infra.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.3, )"
+            },
             "Serilog": {
               "target": "Package",
               "version": "[2.12.0, )"
@@ -88,14 +185,14 @@
         }
       }
     },
-    "C:\\Users\\eliss\\source\\repos\\tarefas\\backend\\Contrats\\Contracts.csproj": {
+    "D:\\Projetos\\tarefas\\backend\\Contrats\\Contracts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\eliss\\source\\repos\\tarefas\\backend\\Contrats\\Contracts.csproj",
+        "projectUniqueName": "D:\\Projetos\\tarefas\\backend\\Contrats\\Contracts.csproj",
         "projectName": "Contracts",
-        "projectPath": "C:\\Users\\eliss\\source\\repos\\tarefas\\backend\\Contrats\\Contracts.csproj",
+        "projectPath": "D:\\Projetos\\tarefas\\backend\\Contrats\\Contracts.csproj",
         "packagesPath": "C:\\Users\\eliss\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\eliss\\source\\repos\\tarefas\\backend\\Contrats\\obj\\",
+        "outputPath": "D:\\Projetos\\tarefas\\backend\\Contrats\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\eliss\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -112,8 +209,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\eliss\\source\\repos\\tarefas\\backend\\domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\eliss\\source\\repos\\tarefas\\backend\\domain\\Domain.csproj"
+              "D:\\Projetos\\tarefas\\backend\\domain\\Domain.csproj": {
+                "projectPath": "D:\\Projetos\\tarefas\\backend\\domain\\Domain.csproj"
               }
             }
           }
@@ -147,14 +244,14 @@
         }
       }
     },
-    "C:\\Users\\eliss\\source\\repos\\tarefas\\backend\\domain\\Domain.csproj": {
+    "D:\\Projetos\\tarefas\\backend\\domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\eliss\\source\\repos\\tarefas\\backend\\domain\\Domain.csproj",
+        "projectUniqueName": "D:\\Projetos\\tarefas\\backend\\domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\eliss\\source\\repos\\tarefas\\backend\\domain\\Domain.csproj",
+        "projectPath": "D:\\Projetos\\tarefas\\backend\\domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\eliss\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\eliss\\source\\repos\\tarefas\\backend\\domain\\obj\\",
+        "outputPath": "D:\\Projetos\\tarefas\\backend\\domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\eliss\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -190,6 +287,88 @@
             "FluentValidation.AspNetCore": {
               "target": "Package",
               "version": "[11.2.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.103\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Projetos\\tarefas\\backend\\infra\\Infra.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Projetos\\tarefas\\backend\\infra\\Infra.csproj",
+        "projectName": "Infra",
+        "projectPath": "D:\\Projetos\\tarefas\\backend\\infra\\Infra.csproj",
+        "packagesPath": "C:\\Users\\eliss\\.nuget\\packages\\",
+        "outputPath": "D:\\Projetos\\tarefas\\backend\\infra\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\eliss\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\Projetos\\tarefas\\backend\\Contrats\\Contracts.csproj": {
+                "projectPath": "D:\\Projetos\\tarefas\\backend\\Contrats\\Contracts.csproj"
+              },
+              "D:\\Projetos\\tarefas\\backend\\domain\\Domain.csproj": {
+                "projectPath": "D:\\Projetos\\tarefas\\backend\\domain\\Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.14, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.3, )"
             }
           },
           "imports": [

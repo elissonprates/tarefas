@@ -17,13 +17,13 @@ export class TarefaService  {
         this.httpHeaders = new HttpHeaders({ Accept: "application/json ; text/plain", "Content-type": "application/json; charset=utf-8" });
     }
 
-    public consultar(): Observable<RetornoApi<Tarefa>> {
+    public obterTarefas(): Observable<RetornoApi<Tarefa>> {
         return this.http.get<RetornoApi<Tarefa>>(`${environment.apiUrl}/tarefas`);
     }
-    public consultarPorId(id: string): Observable<RetornoApi<Tarefa>> {
+    public obterTarefaPorCodigo(id: string): Observable<RetornoApi<Tarefa>> {
         return this.http.get<RetornoApi<Tarefa>>(`${environment.apiUrl}/tarefas/${id}`);
     }
-    public salvar(tarefa: Tarefa): Observable<IRetornoApi> {
+    public incluir(tarefa: Tarefa): Observable<IRetornoApi> {
         return this.http.post<IRetornoApi>(`${environment.apiUrl}/tarefas`, tarefa, { headers: this.httpHeaders });
     }
 }

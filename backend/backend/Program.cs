@@ -1,8 +1,28 @@
+using Api.Config;
+using Application;
 using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddControllers();
+builder.AddDataBaseConfiguration();
+builder.AddDependencyInjection();
+
+
+
+builder.Services.AddAutoMapper(typeof(AppProfile));
+
+builder.Services.AddControllers(config => config.Filters.Add<ServiceExceptionInterceptor>());
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("CorsPolicyTarefas", builder =>
+        builder
+            .AllowAnyOrigin()
+            .AllowAnyMethod()
+            .AllowAnyHeader());
+});
+
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
@@ -22,6 +42,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseCors("CorsPolicyTarefas");
 
 app.UseAuthorization();
 

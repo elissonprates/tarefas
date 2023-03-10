@@ -5,7 +5,7 @@ namespace Domain.Entities;
 
 public class TarefaEntity: IEntity
 {
-    public int Codigo { get; set; }
+    public int? Codigo { get; set; }
     public string? Descricao { get; set; }
     public DateTime? Data { get; set; }
     public TarefaStatusEnum Status { get; set; }

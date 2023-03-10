@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\eliss\\source\\repos\\tarefas\\backend\\application\\Application.csproj": {}
+    "D:\\Projetos\\tarefas\\backend\\application\\Application.csproj": {}
   },
   "projects": {
-    "C:\\Users\\eliss\\source\\repos\\tarefas\\backend\\application\\Application.csproj": {
+    "D:\\Projetos\\tarefas\\backend\\application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\eliss\\source\\repos\\tarefas\\backend\\application\\Application.csproj",
+        "projectUniqueName": "D:\\Projetos\\tarefas\\backend\\application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "C:\\Users\\eliss\\source\\repos\\tarefas\\backend\\application\\Application.csproj",
+        "projectPath": "D:\\Projetos\\tarefas\\backend\\application\\Application.csproj",
         "packagesPath": "C:\\Users\\eliss\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\eliss\\source\\repos\\tarefas\\backend\\application\\obj\\",
+        "outputPath": "D:\\Projetos\\tarefas\\backend\\application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\eliss\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\eliss\\source\\repos\\tarefas\\backend\\Contrats\\Contracts.csproj": {
-                "projectPath": "C:\\Users\\eliss\\source\\repos\\tarefas\\backend\\Contrats\\Contracts.csproj"
+              "D:\\Projetos\\tarefas\\backend\\Contrats\\Contracts.csproj": {
+                "projectPath": "D:\\Projetos\\tarefas\\backend\\Contrats\\Contracts.csproj"
               }
             }
           }
@@ -44,6 +44,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
             "Microsoft.Extensions.Logging.Abstractions": {
               "target": "Package",
               "version": "[7.0.0, )"
@@ -73,14 +77,14 @@
         }
       }
     },
-    "C:\\Users\\eliss\\source\\repos\\tarefas\\backend\\Contrats\\Contracts.csproj": {
+    "D:\\Projetos\\tarefas\\backend\\Contrats\\Contracts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\eliss\\source\\repos\\tarefas\\backend\\Contrats\\Contracts.csproj",
+        "projectUniqueName": "D:\\Projetos\\tarefas\\backend\\Contrats\\Contracts.csproj",
         "projectName": "Contracts",
-        "projectPath": "C:\\Users\\eliss\\source\\repos\\tarefas\\backend\\Contrats\\Contracts.csproj",
+        "projectPath": "D:\\Projetos\\tarefas\\backend\\Contrats\\Contracts.csproj",
         "packagesPath": "C:\\Users\\eliss\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\eliss\\source\\repos\\tarefas\\backend\\Contrats\\obj\\",
+        "outputPath": "D:\\Projetos\\tarefas\\backend\\Contrats\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\eliss\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -97,8 +101,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\eliss\\source\\repos\\tarefas\\backend\\domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\eliss\\source\\repos\\tarefas\\backend\\domain\\Domain.csproj"
+              "D:\\Projetos\\tarefas\\backend\\domain\\Domain.csproj": {
+                "projectPath": "D:\\Projetos\\tarefas\\backend\\domain\\Domain.csproj"
               }
             }
           }
@@ -132,14 +136,14 @@
         }
       }
     },
-    "C:\\Users\\eliss\\source\\repos\\tarefas\\backend\\domain\\Domain.csproj": {
+    "D:\\Projetos\\tarefas\\backend\\domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\eliss\\source\\repos\\tarefas\\backend\\domain\\Domain.csproj",
+        "projectUniqueName": "D:\\Projetos\\tarefas\\backend\\domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\eliss\\source\\repos\\tarefas\\backend\\domain\\Domain.csproj",
+        "projectPath": "D:\\Projetos\\tarefas\\backend\\domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\eliss\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\eliss\\source\\repos\\tarefas\\backend\\domain\\obj\\",
+        "outputPath": "D:\\Projetos\\tarefas\\backend\\domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\eliss\\AppData\\Roaming\\NuGet\\NuGet.Config",

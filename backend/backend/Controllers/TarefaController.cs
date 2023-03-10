@@ -1,4 +1,4 @@
-using Contrats;
+using Contracts;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Api.Controllers;
@@ -19,21 +19,37 @@ public class TarefaController : ControllerBase
     [HttpGet]
     public async Task<IActionResult> ObterTarefas()
     {
-        _service.
-        return null;
+        var retorno = await _service.ObterTarefas();
+        return Ok(retorno);
     }
-
 
     [HttpGet]
     [Route("{codigo}")]
     public async Task<IActionResult> ObterTarefaPorCodigo([FromRoute] int codigo)
     {
-        return null;
+        var retorno = await _service.ObterTarefaPorCodigo(codigo);
+        return Ok(retorno);
     }
 
     [HttpPost]
-    public async Task<IActionResult> SalvarTarefa([FromBody] TarefaDTO dto)
+    public async Task<IActionResult> Incluir([FromBody] TarefaDTO dto)
     {
-        return null;
+        var retorno = await _service.Incluir(dto);
+        return Ok(retorno);
+    }
+
+    [HttpPut]
+    public async Task<IActionResult> Alterar([FromBody] TarefaDTO dto)
+    {
+        var retorno = await _service.Alterar(dto);
+        return Ok(retorno);
+    }
+
+    [HttpDelete]
+    [Route("{codigo}")]
+    public async Task<IActionResult> Excluir([FromRoute] int codigo)
+    {
+        var retorno = await _service.Excluir(codigo);
+        return Ok(retorno);
     }
 }

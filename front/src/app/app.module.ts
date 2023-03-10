@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 
 import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
@@ -32,7 +34,8 @@ import { TarefaComponent } from './page/tarefa/tarefa.component';
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-
+    BrowserAnimationsModule,
+    HttpClientModule,
     InputTextModule,
     ButtonModule,
     MessageModule,

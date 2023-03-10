@@ -21,6 +21,12 @@ public class RetornoApi
         this.sucesso = sucesso;
         this.mensagens = mensagens;
     }
+
+    public RetornoApi(ICollection<string> mensagens, bool sucesso = true)
+    {
+        this.sucesso = sucesso;
+        this.mensagens = mensagens.ToArray();
+    }
 }
 
 public class RetornoApi<T> : RetornoApi

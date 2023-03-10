@@ -1,12 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "Yl/5hFvA8xnpGFHulnkO0fFRpVQVfdon5FQKjY2yC/1JGcifMeS9Up1m6xh24RtvLJXK7b0w/DDPgao28jdImA==",
+  "dgSpecHash": "WQ2iRIvnDoAVrH8SY618VhaIOvrpHhRvDbaaSfDfmf3TqklW+jglTYPWDurSKwDKiA22D8VsPXsp7JxnbXEEmw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\eliss\\source\\repos\\tarefas\\backend\\application\\Application.csproj",
+  "projectFilePath": "D:\\Projetos\\tarefas\\backend\\application\\Application.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\eliss\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\eliss\\.nuget\\packages\\fluentvalidation\\11.5.1\\fluentvalidation.11.5.1.nupkg.sha512",
     "C:\\Users\\eliss\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.2.2\\fluentvalidation.aspnetcore.11.2.2.nupkg.sha512",
     "C:\\Users\\eliss\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.2.1\\fluentvalidation.dependencyinjectionextensions.11.2.1.nupkg.sha512",
+    "C:\\Users\\eliss\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\eliss\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\2.1.0\\microsoft.extensions.dependencyinjection.abstractions.2.1.0.nupkg.sha512",
     "C:\\Users\\eliss\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\microsoft.extensions.logging.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\eliss\\.nuget\\packages\\serilog\\2.12.0\\serilog.2.12.0.nupkg.sha512"

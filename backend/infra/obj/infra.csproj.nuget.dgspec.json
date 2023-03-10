@@ -1,17 +1,76 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\eliss\\source\\repos\\tarefas\\backend\\infra\\infra.csproj": {}
+    "D:\\Projetos\\tarefas\\backend\\infra\\Infra.csproj": {}
   },
   "projects": {
-    "C:\\Users\\eliss\\source\\repos\\tarefas\\backend\\infra\\infra.csproj": {
+    "D:\\Projetos\\tarefas\\backend\\Contrats\\Contracts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\eliss\\source\\repos\\tarefas\\backend\\infra\\infra.csproj",
-        "projectName": "infra",
-        "projectPath": "C:\\Users\\eliss\\source\\repos\\tarefas\\backend\\infra\\infra.csproj",
+        "projectUniqueName": "D:\\Projetos\\tarefas\\backend\\Contrats\\Contracts.csproj",
+        "projectName": "Contracts",
+        "projectPath": "D:\\Projetos\\tarefas\\backend\\Contrats\\Contracts.csproj",
         "packagesPath": "C:\\Users\\eliss\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\eliss\\source\\repos\\tarefas\\backend\\infra\\obj\\",
+        "outputPath": "D:\\Projetos\\tarefas\\backend\\Contrats\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\eliss\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\Projetos\\tarefas\\backend\\domain\\Domain.csproj": {
+                "projectPath": "D:\\Projetos\\tarefas\\backend\\domain\\Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.103\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Projetos\\tarefas\\backend\\domain\\Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Projetos\\tarefas\\backend\\domain\\Domain.csproj",
+        "projectName": "Domain",
+        "projectPath": "D:\\Projetos\\tarefas\\backend\\domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\eliss\\.nuget\\packages\\",
+        "outputPath": "D:\\Projetos\\tarefas\\backend\\domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\eliss\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,7 +99,93 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[11.5.1, )"
+            },
+            "FluentValidation.AspNetCore": {
+              "target": "Package",
+              "version": "[11.2.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.103\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Projetos\\tarefas\\backend\\infra\\Infra.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Projetos\\tarefas\\backend\\infra\\Infra.csproj",
+        "projectName": "Infra",
+        "projectPath": "D:\\Projetos\\tarefas\\backend\\infra\\Infra.csproj",
+        "packagesPath": "C:\\Users\\eliss\\.nuget\\packages\\",
+        "outputPath": "D:\\Projetos\\tarefas\\backend\\infra\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\eliss\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\Projetos\\tarefas\\backend\\Contrats\\Contracts.csproj": {
+                "projectPath": "D:\\Projetos\\tarefas\\backend\\Contrats\\Contracts.csproj"
+              },
+              "D:\\Projetos\\tarefas\\backend\\domain\\Domain.csproj": {
+                "projectPath": "D:\\Projetos\\tarefas\\backend\\domain\\Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.14, )"
+            },
             "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[7.0.3, )"
             }

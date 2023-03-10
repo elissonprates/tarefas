@@ -7,5 +7,5 @@ build_property.InvariantGlobalization =
 build_property.PlatformNeutralAssembly = 
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
-build_property.RootNamespace = infra
-build_property.ProjectDir = C:\Users\eliss\source\repos\tarefas\backend\infra\
+build_property.RootNamespace = Infra
+build_property.ProjectDir = D:\Projetos\tarefas\backend\infra\

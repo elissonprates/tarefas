@@ -1,13 +1,7 @@
 
-export interface Product {
-  id?: string;
-  code?: string;
-  name?: string;
-  description?: string;
-  price?: number;
-  quantity?: number;
-  inventoryStatus?: string;
-  category?: string;
-  image?: string;
-  rating?: number;
+export interface Tarefa {
+  codigo?: number;
+  descricao?: string;
+  data?: Date;
+  status?: number;
 }

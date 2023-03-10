@@ -4,8 +4,8 @@ namespace Contracts;
 
 public class TarefaDTO
 {
-    public int Codigo { get; set; }
-    public string? Descricao { get; set; }
-    public DateTime? Data { get; set; }
-    public TarefaStatusEnum Status { get; set; }
+    public int? codigo { get; set; }
+    public string? descricao { get; set; }
+    public DateTime? data { get; set; }
+    public TarefaStatusEnum status { get; set; }
 }
