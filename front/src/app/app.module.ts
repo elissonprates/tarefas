@@ -1,3 +1,4 @@
+import { ZeroAEsquerdaPipe } from './pipe/ZeroAEsquerda.pipe';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -26,7 +27,7 @@ import { TarefaComponent } from './page/tarefa/tarefa.component';
   declarations: [
     AppComponent,
     TarefaComponent,
-
+    ZeroAEsquerdaPipe
   ],
   imports: [
     BrowserModule,

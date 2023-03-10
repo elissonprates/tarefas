@@ -27,7 +27,7 @@ export class TarefaComponent implements OnInit {
     private messageService: MessageService,
     private confirmationService: ConfirmationService) {
 
-     }
+  }
 
   ngOnInit(): void {
     this.obterTarefas();
@@ -35,18 +35,18 @@ export class TarefaComponent implements OnInit {
 
   private obterTarefas() {
     this.service.obterTarefas().subscribe({
-        next: (value) => {
-            if (value.sucesso) {
-                this.tarefas = value?.dados;
-            } else {
-                this.messageService.add({ severity: 'success', summary: 'Festa', detail: value.mensagens[0] });
-            }
-        },
-        error: (e) => {
-            this.messageService.add({ severity: 'error', key: "geral", summary: 'Falha de comunicação', detail: e });
+      next: (value) => {
+        if (value.sucesso) {
+          this.tarefas = value?.dados;
+        } else {
+          this.messageService.add({ severity: 'success', summary: 'Festa', detail: value.mensagens[0] });
         }
+      },
+      error: (e) => {
+        this.messageService.add({ severity: 'error', key: "geral", summary: 'Falha de comunicação', detail: e });
+      }
     });
-}
+  }
 
 
 
@@ -58,16 +58,15 @@ export class TarefaComponent implements OnInit {
 
   excluirTarefasSelecionadas() {
     this.confirmationService.confirm({
-      message: 'Are you sure you want to delete the selected products?',
+      message: 'Deseja excluir as tarefas selecionadas?',
       header: 'Confirmação',
       icon: 'pi pi-exclamation-triangle',
       accept: () => {
+        this.tarefasSelecionadas.forEach(tarefa => {
+          this.fnExcluir(tarefa.codigo);
+        });
 
-
-        // this.tarefa = this.products.filter(val => !this.selectedProducts.includes(val));
-        // this.selectedProducts = null;
-        this.messageService.add({ severity: 'success', summary: 'Successful', detail: 'Products Deleted', life: 3000 });
-
+        this.obterTarefas();
       }
     });
   }
@@ -83,48 +82,84 @@ export class TarefaComponent implements OnInit {
       header: 'Confirmação',
       icon: 'pi pi-exclamation-triangle',
       accept: () => {
-        // this.tarefas = this.tarefas.filter(x => x.codigo !== tarefa.codigo);
-        // this.tarefa = {};
-        this.messageService.add({ severity: 'success', summary: 'Successful', detail: 'A tarefa foi excluida!', life: 3000 });
+        this.fnExcluir(tarefa.codigo);
+        this.obterTarefas();
       }
     });
   }
+
+  fnExcluir(codigo: number) {
+    this.service.excluir(codigo).subscribe({
+      next: (value) => {
+        if (value.sucesso) {
+          this.messageService.add({ severity: 'success', summary: 'Tarefa', detail: 'A tarefa foi excluida!', life: 3000 });
+        } else {
+          value.mensagens.forEach(mensagem => {
+            this.messageService.add({ severity: 'error', summary: 'Tarefa', detail: mensagem, life: 3000 });
+          });
+        }
+      },
+      error: (e) => this.messageService.add({ severity: 'error', summary: 'Tarefa', detail: e, life: 3000 }),
+    })
+  }
+
 
   fecharModal() {
     this.exibirModal = false;
     this.submitted = false;
   }
 
-  salvar() {
+  salvarTarefa() {
     this.submitted = true;
 
-    // if (this.product.name.trim()) {
-    //   if (this.product.id) {
-    //     this.products[this.findIndexById(this.product.id)] = this.product;
-    //     this.messageService.add({ severity: 'success', summary: 'Successful', detail: 'Product Updated', life: 3000 });
-    //   }
-    //   else {
-    //     this.product.id = this.createId();
-    //     this.product.image = 'product-placeholder.svg';
-    //     this.products.push(this.product);
-    //     this.messageService.add({ severity: 'success', summary: 'Successful', detail: 'Product Created', life: 3000 });
-    //   }
+    this.messageService.clear("salvar");
 
-    //   this.products = [...this.products];
-    //   this.productDialog = false;
-    //   this.product = {};
-    // }
-  }
+    if (this.tarefa.nome.trim() && this.tarefa.descricao.trim()) {
 
-  findIndexById(id: string): number {
-    let index = -1;
-    // for (let i = 0; i < this.products.length; i++) {
-    //   if (this.products[i].id === id) {
-    //     index = i;
-    //     break;
-    //   }
-    // }
+      if (!this.tarefa.codigo) {
 
-    return index;
+        this.service.incluir(this.tarefa).subscribe({
+          next: (value) => {
+            if (value.sucesso) {
+              this.messageService.add({ severity: 'success', summary: 'Tarefa', detail: 'Tarefa inclusa', life: 3000 });
+              this.obterTarefas();
+              this.exibirModal = false;
+              this.tarefa = {};
+            } else {
+
+              value.mensagens.forEach(mensagem => {
+                this.messageService.add({ severity: 'error', key: "salvar", detail: mensagem });
+              });
+
+            }
+          },
+          error: (e) => this.messageService.add({ severity: 'error', key: "salvar", detail: e }),
+        })
+
+      }
+      else {
+
+        this.service.alterar(this.tarefa).subscribe({
+          next: (value) => {
+            if (value.sucesso) {
+              this.messageService.add({ severity: 'success', summary: 'Tarefa', detail: 'Tarefa atualizada', life: 3000 });
+              this.obterTarefas();
+              this.exibirModal = false;
+              this.tarefa = {};
+            } else {
+
+              value.mensagens.forEach(mensagem => {
+                this.messageService.add({ severity: 'error', key: "salvar", detail: mensagem });
+              });
+
+            }
+          },
+          error: (e) => this.messageService.add({ severity: 'error', key: "salvar", detail: e }),
+        })
+
+      }
+
+
+    }
   }
 }

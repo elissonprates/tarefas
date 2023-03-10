@@ -2,7 +2,6 @@
 using Domain.Entities;
 using Contracts;
 using Microsoft.Extensions.Logging;
-using Microsoft.AspNetCore.Mvc.Razor.TagHelpers;
 
 namespace Infra;
 

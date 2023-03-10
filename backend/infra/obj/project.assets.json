@@ -3775,8 +3775,8 @@
     },
     "Contracts/1.0.0": {
       "type": "project",
-      "path": "../Contrats/Contracts.csproj",
-      "msbuildProject": "../Contrats/Contracts.csproj"
+      "path": "../Contracts/Contracts.csproj",
+      "msbuildProject": "../Contracts/Contracts.csproj"
     },
     "Domain/1.0.0": {
       "type": "project",
@@ -3821,8 +3821,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\Projetos\\tarefas\\backend\\Contrats\\Contracts.csproj": {
-              "projectPath": "D:\\Projetos\\tarefas\\backend\\Contrats\\Contracts.csproj"
+            "D:\\Projetos\\tarefas\\backend\\Contracts\\Contracts.csproj": {
+              "projectPath": "D:\\Projetos\\tarefas\\backend\\Contracts\\Contracts.csproj"
             },
             "D:\\Projetos\\tarefas\\backend\\domain\\Domain.csproj": {
               "projectPath": "D:\\Projetos\\tarefas\\backend\\domain\\Domain.csproj"

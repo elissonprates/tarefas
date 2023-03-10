@@ -7,23 +7,29 @@ import { IRetornoApi, RetornoApi } from '../model/retorno';
 import { Tarefa } from '../model/tarefa';
 
 @Injectable({
-    providedIn: 'root'
+  providedIn: 'root'
 })
-export class TarefaService  {
+export class TarefaService {
 
   protected httpHeaders: HttpHeaders;
 
-    constructor(protected http: HttpClient) {
-        this.httpHeaders = new HttpHeaders({ Accept: "application/json ; text/plain", "Content-type": "application/json; charset=utf-8" });
-    }
+  constructor(protected http: HttpClient) {
+    this.httpHeaders = new HttpHeaders({ Accept: "application/json ; text/plain", "Content-type": "application/json; charset=utf-8" });
+  }
 
-    public obterTarefas(): Observable<RetornoApi<Tarefa>> {
-        return this.http.get<RetornoApi<Tarefa>>(`${environment.apiUrl}/tarefas`);
-    }
-    public obterTarefaPorCodigo(id: string): Observable<RetornoApi<Tarefa>> {
-        return this.http.get<RetornoApi<Tarefa>>(`${environment.apiUrl}/tarefas/${id}`);
-    }
-    public incluir(tarefa: Tarefa): Observable<IRetornoApi> {
-        return this.http.post<IRetornoApi>(`${environment.apiUrl}/tarefas`, tarefa, { headers: this.httpHeaders });
-    }
+  public obterTarefas(): Observable<RetornoApi<Tarefa>> {
+    return this.http.get<RetornoApi<Tarefa>>(`${environment.apiUrl}/tarefas`);
+  }
+  public obterTarefaPorCodigo(codigo: string): Observable<RetornoApi<Tarefa>> {
+    return this.http.get<RetornoApi<Tarefa>>(`${environment.apiUrl}/tarefas/${codigo}`);
+  }
+  public incluir(tarefa: Tarefa): Observable<IRetornoApi> {
+    return this.http.post<IRetornoApi>(`${environment.apiUrl}/tarefas`, tarefa, { headers: this.httpHeaders });
+  }
+  public alterar(tarefa: Tarefa): Observable<IRetornoApi> {
+    return this.http.put<IRetornoApi>(`${environment.apiUrl}/tarefas`, tarefa, { headers: this.httpHeaders });
+  }
+  public excluir(codigo: number): Observable<IRetornoApi> {
+    return this.http.delete<IRetornoApi>(`${environment.apiUrl}/tarefas/${codigo}`);
+  }
 }

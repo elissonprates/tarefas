@@ -13,9 +13,10 @@
   </p-toolbar>
 
   <p-table #dt [value]="tarefas" [rows]="10" [paginator]="true"
-    [globalFilterFields]="['codigo','descricao','data','status']" [tableStyle]="{'min-width': '75rem'}"
-    [(selection)]="tarefasSelecionadas" [rowHover]="true" dataKey="id"
-    currentPageReportTemplate="Exibindo a tarefa {first} até {last} de um total de {totalRecords} tarefas" [showCurrentPageReport]="true">
+    [globalFilterFields]="['codigo','nome','descricao']" [tableStyle]="{'min-width': '75rem'}"
+    [(selection)]="tarefasSelecionadas" [rowHover]="true" dataKey="codigo"
+    currentPageReportTemplate="Exibindo a tarefa {first} até {last} de um total de {totalRecords} tarefas"
+    [showCurrentPageReport]="true">
     <ng-template pTemplate="caption">
       <div class="flex align-items-center justify-content-between">
 
@@ -31,10 +32,10 @@
         <th style="width: 4rem">
           <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
         </th>
-        <th pSortableColumn="codigo" style="min-width:15rem">Código<p-sortIcon field="codigo"></p-sortIcon></th>
-        <th pSortableColumn="descricao">Descrição<p-sortIcon field="descricao"></p-sortIcon></th>
-        <th pSortableColumn="data">Data<p-sortIcon field="data"></p-sortIcon></th>
-        <th></th>
+        <th pSortableColumn="codigo" class="w-1">Código<p-sortIcon field="codigo"></p-sortIcon></th>
+        <th pSortableColumn="nome" class="w-3">Nome<p-sortIcon field="nome"></p-sortIcon></th>
+        <th pSortableColumn="descricao" class="w-6">Descrição<p-sortIcon field="descricao"></p-sortIcon></th>
+        <th class="w-2"></th>
       </tr>
     </ng-template>
     <ng-template pTemplate="body" let-tarefa>
@@ -42,14 +43,14 @@
         <td>
           <p-tableCheckbox [value]="tarefa"></p-tableCheckbox>
         </td>
-        <td>{{ tarefa.codigo }}</td>
+        <td>{{ tarefa.codigo | zeroEsquerda: 4 }}</td>
+        <td>{{ tarefa.nome }}</td>
         <td>{{ tarefa.descricao }}</td>
-        <td>{{tarefa.data}}</td>
         <td>
           <button pButton pRipple icon="pi pi-pencil" class="p-button-rounded p-button-success mr-2"
-            (click)="editProduct(tarefa)"></button>
+            (click)="alterarTarefa(tarefa)"></button>
           <button pButton pRipple icon="pi pi-trash" class="p-button-rounded p-button-warning"
-            (click)="deleteProduct(tarefa)"></button>
+            (click)="excluirTarefa(tarefa)"></button>
         </td>
       </tr>
     </ng-template>
@@ -61,20 +62,32 @@
   </p-table>
 </div>
 
-<p-dialog [(visible)]="exibirModal" [style]="{width: '450px'}" header="Product Details" [modal]="true"
-  styleClass="p-fluid">
+<p-dialog [(visible)]="exibirModal" [style]="{width: '450px'}" header="Tarefa" [modal]="true" styleClass="p-fluid">
   <ng-template pTemplate="content">
+
+    <div class="field" *ngIf="tarefa.codigo">
+      <label for="codigo">Código</label>
+      <input type="text" pInputText id="codigo" [(ngModel)]="tarefa.codigo" readonly/>
+    </div>
+
+    <div class="field">
+      <label for="nome">Nome</label>
+      <input type="text" pInputText id="nome" [(ngModel)]="tarefa.nome" required autofocus />
+      <small class="p-error" *ngIf="submitted && !tarefa.nome">Informe o nome da tarefa.</small>
+    </div>
     <div class="field">
       <label for="descricao">Descrição</label>
       <input type="text" pInputText id="descricao" [(ngModel)]="tarefa.descricao" required autofocus />
       <small class="p-error" *ngIf="submitted && !tarefa.descricao">Informe a descrição da tarefa.</small>
     </div>
 
+    <p-messages key="salvar" styleClass="pb-3"></p-messages>
+
   </ng-template>
 
   <ng-template pTemplate="footer">
     <button pButton pRipple label="Cancelar" icon="pi pi-times" class="p-button-text" (click)="fecharModal()"></button>
-    <button pButton pRipple label="Salvar" icon="pi pi-check" class="p-button-text" (click)="salvar()"></button>
+    <button pButton pRipple label="Salvar" icon="pi pi-check" class="p-button-text" (click)="salvarTarefa()"></button>
   </ng-template>
 </p-dialog>
 

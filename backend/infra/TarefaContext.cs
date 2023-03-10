@@ -22,7 +22,6 @@ public class TarefaContext: DbContext
                  }
             ));
             x.HasKey(x => x.Codigo);
-            x.Property(x => x.Codigo).HasColumnName("TarefaCodigo");
         });
     }
 

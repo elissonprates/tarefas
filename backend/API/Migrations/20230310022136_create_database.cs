@@ -22,19 +22,13 @@ namespace api.Migrations
                         .Annotation("SqlServer:TemporalHistoryTableSchema", null)
                         .Annotation("SqlServer:TemporalPeriodEndColumnName", "data_fim_vigencia")
                         .Annotation("SqlServer:TemporalPeriodStartColumnName", "data_inicio_vigencia"),
+                    Nome = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                        .Annotation("SqlServer:IsTemporal", true)
+                        .Annotation("SqlServer:TemporalHistoryTableName", "tb_tarefas_historico")
+                        .Annotation("SqlServer:TemporalHistoryTableSchema", null)
+                        .Annotation("SqlServer:TemporalPeriodEndColumnName", "data_fim_vigencia")
+                        .Annotation("SqlServer:TemporalPeriodStartColumnName", "data_inicio_vigencia"),
                     Descricao = table.Column<string>(type: "nvarchar(max)", nullable: true)
-                        .Annotation("SqlServer:IsTemporal", true)
-                        .Annotation("SqlServer:TemporalHistoryTableName", "tb_tarefas_historico")
-                        .Annotation("SqlServer:TemporalHistoryTableSchema", null)
-                        .Annotation("SqlServer:TemporalPeriodEndColumnName", "data_fim_vigencia")
-                        .Annotation("SqlServer:TemporalPeriodStartColumnName", "data_inicio_vigencia"),
-                    Data = table.Column<DateTime>(type: "datetime2", nullable: true)
-                        .Annotation("SqlServer:IsTemporal", true)
-                        .Annotation("SqlServer:TemporalHistoryTableName", "tb_tarefas_historico")
-                        .Annotation("SqlServer:TemporalHistoryTableSchema", null)
-                        .Annotation("SqlServer:TemporalPeriodEndColumnName", "data_fim_vigencia")
-                        .Annotation("SqlServer:TemporalPeriodStartColumnName", "data_inicio_vigencia"),
-                    Status = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:IsTemporal", true)
                         .Annotation("SqlServer:TemporalHistoryTableName", "tb_tarefas_historico")
                         .Annotation("SqlServer:TemporalHistoryTableSchema", null)
