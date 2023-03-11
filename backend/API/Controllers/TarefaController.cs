@@ -46,10 +46,20 @@ public class TarefaController : ControllerBase
     }
 
     [HttpDelete]
-    [Route("{codigo}")]
-    public async Task<IActionResult> Excluir([FromRoute] int codigo)
+    public async Task<IActionResult> Excluir([FromQuery(Name ="codigo")] int[] codigos)
     {
-        var retorno = await _service.Excluir(codigo);
+        RetornoApi retorno = null;
+
+        foreach (var codigo in codigos)
+        {
+            retorno = await _service.Excluir(codigo);
+
+            if (retorno.sucesso == false)
+            {
+                return Ok(retorno);
+            }
+        }
+
         return Ok(retorno);
     }
 }

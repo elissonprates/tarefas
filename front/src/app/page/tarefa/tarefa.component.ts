@@ -62,11 +62,8 @@ export class TarefaComponent implements OnInit {
       header: 'Confirmação',
       icon: 'pi pi-exclamation-triangle',
       accept: () => {
-        this.tarefasSelecionadas.forEach(tarefa => {
-          this.fnExcluir(tarefa.codigo);
-        });
-
-        this.obterTarefas();
+        let codigos = this.tarefasSelecionadas.map(tarefa => tarefa.codigo);
+        this.fnExcluir(codigos);
       }
     });
   }
@@ -82,14 +79,13 @@ export class TarefaComponent implements OnInit {
       header: 'Confirmação',
       icon: 'pi pi-exclamation-triangle',
       accept: () => {
-        this.fnExcluir(tarefa.codigo);
-        this.obterTarefas();
+        this.fnExcluir([tarefa.codigo]);
       }
     });
   }
 
-  fnExcluir(codigo: number) {
-    this.service.excluir(codigo).subscribe({
+  fnExcluir(codigos: number[]) {
+    this.service.excluir(codigos).subscribe({
       next: (value) => {
         if (value.sucesso) {
           this.messageService.add({ severity: 'success', summary: 'Tarefa', detail: 'A tarefa foi excluida!', life: 3000 });
@@ -100,6 +96,7 @@ export class TarefaComponent implements OnInit {
         }
       },
       error: (e) => this.messageService.add({ severity: 'error', summary: 'Tarefa', detail: e, life: 3000 }),
+      complete: () => this.obterTarefas()
     })
   }
 

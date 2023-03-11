@@ -29,7 +29,8 @@ export class TarefaService {
   public alterar(tarefa: Tarefa): Observable<IRetornoApi> {
     return this.http.put<IRetornoApi>(`${environment.apiUrl}/tarefas`, tarefa, { headers: this.httpHeaders });
   }
-  public excluir(codigo: number): Observable<IRetornoApi> {
-    return this.http.delete<IRetornoApi>(`${environment.apiUrl}/tarefas/${codigo}`);
+  public excluir(codigos: number[]): Observable<IRetornoApi> {
+    let params = codigos.map(codigo => `codigo=${codigo}`).join('&');
+    return this.http.delete<IRetornoApi>(`${environment.apiUrl}/tarefas?${params}`);
   }
 }
